@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- ブラウザで表示されるタブの名前を編集 -->
+    <title>電話帳</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- yieldに各種テンプレートファイルが挿入される -->
+    <%= yield %>
+  </body>
+</html>

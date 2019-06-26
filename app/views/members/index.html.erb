@@ -1,0 +1,30 @@
+<% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+<% end %>
+
+<!-- 登録した「名前」「よみがな」「電話番号」を表として表示させる -->
+<table border="1">
+<tr bgcolor="skyblue">
+<th>名前</th>
+<th>よみがな</th>
+<th>電話番号</th>
+</tr>
+
+    <!-- eachメソッドを使い、@membersの要素の数だけ繰り返す -->
+    <% @members.each do |member| %>
+        <div class="member">
+            <tr>
+                <td><%= link_to member.name, edit_member_path(member.id) %></td>
+                <td><%= member.yomi %></td>
+                <td><%= member.phone %></td>
+            </tr>
+        </div>
+
+    <% end %>
+
+</table>
+
+<p></p>
+
+<!-- 「新規登録」という名で、/members/newへのリンクを設置 -->
+<%= link_to "新規登録", new_member_path %>

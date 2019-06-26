@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    attributes:
+      member:
+        name: 名前
+        yomi: よみがな
+        phone: 電話番号
